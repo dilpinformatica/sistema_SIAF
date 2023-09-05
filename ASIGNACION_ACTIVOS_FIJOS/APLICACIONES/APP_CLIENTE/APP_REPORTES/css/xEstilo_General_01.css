@@ -1,0 +1,350 @@
+﻿*{ margin:0; padding:0; }
+
+body, html 
+{ 
+    background-image: url(images/fondo-principal1.jpg);
+    padding-top:10px; 
+    color: #212121; font-size: 1em;
+    font-family: Arial, Times New Roman;
+}
+
+[class*="col-"], footer 
+{
+    background-color:InfoBackground;
+    /*border:1px solid black;
+    border-radius:6px;
+    line-height:40px;*/
+    text-align:center;
+}
+        
+
+.row 
+{
+    /*margin-right:-1em;
+    margin-left:-1em;*/
+}
+
+.container 
+{
+    padding-right:1em;
+    padding-left:1em;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+@media (min-width:768px) 
+{
+    .container { width:750px; }
+
+    
+}
+        
+@media (min-width:992px) 
+{
+    .container { width:970px;}
+
+}
+        
+@media (min-width:1200px) 
+{
+    .container { width:1170px; }
+
+    
+}
+
+.col-lg-offset-6 { margin-left:50%; }
+
+article.col-sm-10, article.col-sm-9, nav.col-sm-2, nav.col-sm-3 { line-height:150px; }
+
+.page-header 
+{
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.well 
+{
+    background-color:#CCC;
+    padding: 20px;
+}
+
+.btn-responsive {
+    white-space: normal !important;
+    word-wrap: break-word;
+}
+
+
+
+/* Para el control tabs */
+
+
+
+.xFondo
+{
+    background-color:White;
+    color:Navy;
+    text-align:center;
+}
+
+.xFilas
+{
+    color:Maroon;
+    font-size:0.7em;
+    font-weight:normal;
+}
+
+.titulo_solicitud
+{
+    color:Black;
+    text-align: center;
+    text-transform:none;
+    text-decoration:underline;
+    font-size: 1.7em;
+    font-weight:normal;
+    
+}
+
+.sub_titulo_solicitud
+{
+    color:White;
+    text-align: left;
+    background-color:Teal;
+    text-transform: none;
+    font-size: .85em;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding: 3px;
+    
+}
+
+.botones_mostrar 
+{
+    font-size: 0.70em;
+    height: 20px;
+    margin-top: -3px;
+    float:right;
+}
+
+.fecha_mascaras {
+}
+
+.cedula_mascaras {
+}
+
+.botones_comando     /* Contenedor Botones de Comandos */
+{
+    float:left;
+    border: 3px solid #a4a4a4;
+    margin-top:0.5%;
+    margin-bottom:0.5%;
+    padding:0.5%;
+    text-align: left;
+	border-radius: 4px;
+}
+
+.botones_buscar
+{
+    font-size: 0.70em;
+    height: 26px;
+    margin-top: 1px;
+}
+
+.lbl_enlinea
+{
+    display: inline;
+}
+
+.lbl_enbloque
+{
+    display: block;
+}
+
+.lbl_checkbox 
+{
+    margin-left: -3px;
+    padding: 0 0 0 0;
+}
+
+.Textos_01
+{
+    font-size: 0.7em;
+    text-align:left;
+    width:auto;
+    color:Maroon;
+    font-weight:bold;
+    margin-top: 2px;
+    padding-top: 2px;
+	padding-right: 5px;
+	padding-bottom: 4px;
+	padding-left: 5px;
+	border: solid .5px #79B7E7;
+	box-shadow: 0px 0px 4px #aaa;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px; 
+	border-radius: 4px;
+	text-transform:uppercase;
+}
+
+label
+{
+    color:Black;
+    text-align: left;
+    text-transform: none;
+    font-size: 0.9em;
+    margin-left: 5px;
+    font-weight:normal;
+}
+
+.txt_buscar   /* input de cadenas de busquedas */
+{
+	margin-top: 2px;
+	border: solid .5px #79B7E7;   /* #DEDEDE */
+	font-size: 0.7em;
+	padding-top: 2px;
+	padding-right: 5px;
+	padding-bottom: 4px;
+	padding-left: 5px;
+	box-shadow: 0px 0px 4px #aaa;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px; 
+	border-radius: 4px;
+	text-transform:uppercase;
+	
+}
+
+.Textos_01:hover, .combos:hover, .txt_buscar:hover
+{
+	border: solid 1px #3366CC;
+}
+
+.Textos_01:focus, .txt_buscar:focus, .combos:focus
+{
+	border: solid 1px #3366CC;
+}
+
+.opcion
+{
+    font-size: 0.7em;
+    color: #000080;
+}
+
+.combos
+{
+    font-size: 0.7em;
+    color:Maroon;
+    width:auto;
+    font-weight:bold;
+    padding-top: 2px;
+	padding-right: 5px;
+	padding-bottom: 4px;
+	padding-left: 5px;
+	border: solid .5px #79B7E7;
+	box-shadow: 0px 0px 4px #aaa;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px; 
+	border-radius: 4px;
+	text-transform:uppercase;
+}
+
+
+
+.solicitante     /* Contenedores de cada campo del solicitante */
+{
+    /*border: .3px solid black; */
+    padding: 2px;
+    margin: 0;
+    height: auto;
+    width: auto;
+    float: left;
+}
+
+.solicitud_datos     /* Contenedores de cada campo de la ventana */
+{
+    /*border: .3px solid #000080; */
+    padding: 2px;
+    margin: 0;
+    height: auto;
+    width: auto;
+    float: left;
+}
+
+textarea { resize: none; overflow: auto; }
+
+.txt_checkbox 
+{
+    margin-top: 2px;
+    padding: 0 0 0 0;
+    
+}
+
+.Ventanas
+{    
+    overflow: auto;
+}
+
+.Contenedores
+{   
+    padding:1%;
+    width:98%; height:95%;
+    overflow: auto;
+}
+
+#jqxWidget, #jqxWidget_01, #jqxWidget_02, #jqxWidget_03, #jqxWidget_04, #jqxWidget_05, #jqxWidget_06, #jqxWidget_07, #jqxWidget_08, #jqxWidget_09, #jqxWidget_10, #jqxWidget_11, #jqxWidget_12, #jqxWidget_13, #jqxWidget_14, #jqxWidget_15, #jqxWidget_16
+{
+    float:left; border:2px solid #000; 
+    margin:1%;
+}
+
+
+#jqxgrid, #jqxgrid_01, #jqxgrid_02, #jqxgrid_03, #jqxgrid_04, #jqxgrid_05, #jqxgrid_06, #jqxgrid_07, #jqxgrid_08, #jqxgrid_09, #jqxgrid_10, #jqxgrid_11, #jqxgrid_12, #jqxgrid_13, #jqxgrid_14, #jqxgrid_15, #jqxgrid_16
+{
+    float:none; border:1px dashed #000; 
+    font-size: 0.6em; font-family: Arial Black; 
+    color:Navy; font-weight: bold; 
+}
+
+.column
+{
+    font-size:0.8em;
+    color:Maroon;
+    
+}
+
+.ui-effects-transfer { border: 3px dotted Navy; }	
+
+#jqxgrid tr.jqgrow td,
+#jqxgrid_01 tr.jqgrow td, #jqxgrid_02 tr.jqgrow td, #jqxgrid_03 tr.jqgrow td, #jqxgrid_04 tr.jqgrow td, #jqxgrid_05 tr.jqgrow td, 
+#jqxgrid_06 tr.jqgrow td, #jqxgrid_07 tr.jqgrow td, #jqxgrid_08 tr.jqgrow td, #jqxgrid_09 tr.jqgrow td, #jqxgrid_10 tr.jqgrow td, 
+#jqxgrid_11 tr.jqgrow td, #jqxgrid_12 tr.jqgrow td, #jqxgrid_13 tr.jqgrow td, #jqxgrid_14 tr.jqgrow td, #jqxgrid_15 tr.jqgrow td, 
+#jqxgrid_16 tr.jqgrow td
+{
+    white-space: normal !important;
+    vertical-align:middle;
+    height:auto;
+    padding-top:2px; 
+	font-size:0.8em;
+}
+
+.loadingLayer {
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0;
+    position: fixed;
+    text-align: center;
+    z-index: 1000;
+    opacity: 0.7;
+    background: black;
+    padding:20%;
+}
+
+.loadingLayer img{
+    height:300%;
+    width:50%;
+}
+
+
+ 

@@ -1,0 +1,3 @@
+No Quitarlo ni la foto de interrogacion.jpg, esto es para preservar la carpeta Adjunto. 
+Cuando se realiza una publicacion nueva del Sitio Web,
+respaldar las subcarpetas y copiarlas al Sitio Web Fuente para que sea copiada nuevamente...

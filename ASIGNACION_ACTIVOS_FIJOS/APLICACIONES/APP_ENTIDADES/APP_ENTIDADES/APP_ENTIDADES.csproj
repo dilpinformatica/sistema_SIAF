@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{30096095-1C2E-4F11-BE5C-3D8D80729F6B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>APP_ENTIDADES</RootNamespace>
+    <AssemblyName>APP_ENTIDADES</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cACCESOS.cs" />
+    <Compile Include="cCARGOS.cs" />
+    <Compile Include="cCONTACTOS_x_PROVEEDOR.cs" />
+    <Compile Include="cEMPLEADOS.cs" />
+    <Compile Include="cOFICINAS.cs" />
+    <Compile Include="cOPCIONES.cs" />
+    <Compile Include="cPROVEEDORES.cs" />
+    <Compile Include="cREG_ARTICULOS.cs" />
+    <Compile Include="cREG_ASIGNACIONES_DET.cs" />
+    <Compile Include="cREG_ASIGNACIONES_ENC.cs" />
+    <Compile Include="cREG_CARGA_ARCHIVOS.cs" />
+    <Compile Include="cROL.cs" />
+    <Compile Include="cTIPO_ALTAS.cs" />
+    <Compile Include="cTIPO_CLASES.cs" />
+    <Compile Include="cTIPO_COLORES.cs" />
+    <Compile Include="cTIPO_CONTACTO_PROVEEDOR.cs" />
+    <Compile Include="cTIPO_MARCAS.cs" />
+    <Compile Include="cTIPO_MODELOS.cs" />
+    <Compile Include="cTIPO_MOVIMIENTOS.cs" />
+    <Compile Include="cTIPO_PROCEDENCIAS.cs" />
+    <Compile Include="cTIPO_PROVEEDOR.cs" />
+    <Compile Include="cTIPO_SEXOS.cs" />
+    <Compile Include="cUSUARIOS.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PROYECTOS_RPT.cs" />
+    <Compile Include="TBL_ACCESOS.cs" />
+    <Compile Include="TBL_ACCESOS_01.cs" />
+    <Compile Include="TBL_ALFABETICO_EMPLEADOS.cs" />
+    <Compile Include="TBL_AUTENTICACION.cs" />
+    <Compile Include="TBL_BITACORAS.cs" />
+    <Compile Include="TBL_CARGOS.cs" />
+    <Compile Include="TBL_CONTACTOS_x_PROVEEDOR.cs" />
+    <Compile Include="TBL_DOCUMENTOS.cs" />
+    <Compile Include="TBL_EMPLEADOS.cs" />
+    <Compile Include="TBL_FIRMAS_DOCUMENTOS.cs" />
+    <Compile Include="TBL_OFICINAS.cs" />
+    <Compile Include="TBL_OPCIONES.cs" />
+    <Compile Include="TBL_PROVEEDORES.cs" />
+    <Compile Include="TBL_REG_ARTICULOS.cs" />
+    <Compile Include="TBL_REG_ASIGNACIONES_DET.cs" />
+    <Compile Include="TBL_REG_ASIGNACIONES_ENC.cs" />
+    <Compile Include="TBL_REG_CATALOGO_ARTICULOS.cs" />
+    <Compile Include="TBL_REG_CONTACTOS_x_PROVEEDOR_RPT.cs" />
+    <Compile Include="TBL_REG_HOJA_ASIGNACIONES.cs" />
+    <Compile Include="TBL_ROL.cs" />
+    <Compile Include="TBL_SESIONES.cs" />
+    <Compile Include="TBL_TIPO_ALTAS.cs" />
+    <Compile Include="TBL_TIPO_CLASES.cs" />
+    <Compile Include="TBL_TIPO_COLORES.cs" />
+    <Compile Include="TBL_TIPO_CONTACTO_PROVEEDOR.cs" />
+    <Compile Include="TBL_TIPO_MARCAS.cs" />
+    <Compile Include="TBL_TIPO_MODELOS.cs" />
+    <Compile Include="TBL_TIPO_MOVIMIENTOS.cs" />
+    <Compile Include="TBL_TIPO_PROCEDENCIAS.cs" />
+    <Compile Include="TBL_TIPO_PROVEEDOR.cs" />
+    <Compile Include="TBL_TIPO_SEXOS.cs" />
+    <Compile Include="TBL_USUARIOS.cs" />
+    <Compile Include="TBL_VARIABLES.cs" />
+    <Compile Include="TBL_VARIABLES_BUSQ.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Diagrama_Clases.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

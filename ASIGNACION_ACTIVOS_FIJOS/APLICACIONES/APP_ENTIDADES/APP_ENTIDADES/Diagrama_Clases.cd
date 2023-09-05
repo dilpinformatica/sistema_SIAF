@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="APP_ENTIDADES.cUSUARIOS" Collapsed="true">
+    <Position X="2.5" Y="1.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAggAQAACAAAAIAoAAAQAACAAAACQCEEA=</HashCode>
+      <FileName>cUSUARIOS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="APP_ENTIDADES.TBL_AUTENTICACION" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>iAQAQAACSgEIgAAACAQAAEAAAIAIABAiIAAAmAACEEA=</HashCode>
+      <FileName>TBL_AUTENTICACION.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="APP_ENTIDADES.TBL_USUARIOS" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>kBAAAAACAAAIgAAQCAwAAAACA4AAABAACAAAACQCEEA=</HashCode>
+      <FileName>TBL_USUARIOS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="APP_ENTIDADES.TBL_VARIABLES" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>gAAAAQAAAAAAgAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>TBL_VARIABLES.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="APP_ENTIDADES.TBL_ROL" Collapsed="true">
+    <Position X="2.5" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>gAAAAQAAAAEAgAAAAAAAAIACAAAAAAAAAAEAAABAAAA=</HashCode>
+      <FileName>TBL_ROL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="APP_ENTIDADES.TBL_OPCIONES" Collapsed="true">
+    <Position X="2.5" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>gAAAAQAAAAEAgASLAABAAIADgAAAABAIAAEAAABAAAg=</HashCode>
+      <FileName>TBL_OPCIONES.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="APP_ENTIDADES.cOPCIONES" Collapsed="true">
+    <Position X="2.5" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>gAAAAQAAAAAAgASLAAAAAAACAAAAAAIAAAEAACAAAAg=</HashCode>
+      <FileName>cOPCIONES.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="APP_ENTIDADES.cROL" Collapsed="true">
+    <Position X="0.5" Y="1.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>gAAAAQAAAAAAgAAAAAAAAAACAAAAAAAAAAEAACAAAAA=</HashCode>
+      <FileName>cROL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="APP_ENTIDADES.TBL_ACCESOS" Collapsed="true">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gCQEAAAAAAACgABAAAAQAgAAAAAMAMAAAAEAAAgAAgA=</HashCode>
+      <FileName>TBL_ACCESOS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="APP_ENTIDADES.cACCESOS" Collapsed="true">
+    <Position X="4.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gCQEAAAAAAACgABAAAAQAgAAAAAIAMAAAAAAAAgAAgA=</HashCode>
+      <FileName>cACCESOS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="APP_ENTIDADES.TBL_SESIONES" Collapsed="true">
+    <Position X="4.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAgAACAAgAAAAIAQAAAAAAAAAAACAAAAg=</HashCode>
+      <FileName>TBL_SESIONES.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="APP_ENTIDADES.TBL_BITACORAS" Collapsed="true">
+    <Position X="4.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAgQAAIAAAAgCAAgAAgAAAAAAAgAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>TBL_BITACORAS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="APP_ENTIDADES.TBL_ACCESOS_01" Collapsed="true">
+    <Position X="4.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACQEAAAAAAACAABAAAAQAgAAAAAIAMAAAAAAAAgAAgA=</HashCode>
+      <FileName>TBL_ACCESOS_01.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="APP_ENTIDADES.TBL_CARGOS" Collapsed="true">
+    <Position X="6.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>gAIhAQQAAAEAgAAAAAAAAIACAAAAAAOAAAEAECAAAAA=</HashCode>
+      <FileName>TBL_CARGOS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="APP_ENTIDADES.TBL_OFICINAS" Collapsed="true">
+    <Position X="6.25" Y="1.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>gBIhAQQACAEAgAAAAAQAAIADgAAAABOIAAEAEKAAAAA=</HashCode>
+      <FileName>TBL_OFICINAS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="APP_ENTIDADES.TBL_CARGOS_BUSQ" Collapsed="true">
+    <Position X="6.25" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABIAAAAAAAAAAAAgACAAAAAAAAAAAAA=</HashCode>
+      <FileName>TBL_CARGOS_BUSQ.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="APP_ENTIDADES.TBL_OFICINAS_BUSQ" Collapsed="true">
+    <Position X="6.25" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABIAAAAAAAAAAAAgACAAAAAAAAAAAAA=</HashCode>
+      <FileName>TBL_OFICINAS_BUSQ.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="APP_ENTIDADES.cCARGOS" Collapsed="true">
+    <Position X="6.25" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>iAAAAQQAAAAAgAAAAAAAAAACAAAAAAECAAEAACAAAAA=</HashCode>
+      <FileName>cCARGOS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="APP_ENTIDADES.cOFICINAS" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>iAAAAQQAEAAAgAQAAAAAAAACAAAAAAMSAAEAACAAAAA=</HashCode>
+      <FileName>cOFICINAS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="APP_ENTIDADES.TBL_EMPLEADOS" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>yBohDAQAQIFQgAMQEAAAAIACIKAAFEOJAAEAECAARMA=</HashCode>
+      <FileName>TBL_EMPLEADOS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="APP_ENTIDADES.cEMPLEADOS" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>iBoADAQAQIAAgAMAAAAAAAACEBAAFAECAIAAECAAQIA=</HashCode>
+      <FileName>cEMPLEADOS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="APP_ENTIDADES.TBL_VARIABLES_BUSQ" Collapsed="true">
+    <Position X="8.25" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABIAAAAAAAAAAAAgACAAAAAAAAAAAAA=</HashCode>
+      <FileName>TBL_VARIABLES_BUSQ.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="APP_ENTIDADES.TBL_ALFABETICO_EMPLEADOS" Collapsed="true">
+    <Position X="8.25" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>hhKBAAABIADAAIAAAkAAAUAMADAAAAAADIACAKQGQIA=</HashCode>
+      <FileName>TBL_ALFABETICO_EMPLEADOS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

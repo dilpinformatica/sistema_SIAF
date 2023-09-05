@@ -1,0 +1,718 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Last-Modified" content="0" />
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate" />
+
+    <meta charset="utf-8" />
+    <meta name="description" content="Aplicación WEB para el CONTROL DE LOS INVENTARIOS DE ACTIVOS FIJOS A EMPLEADOS" />
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+   
+    <title>INVENTARIO_ACTIVOS_FIJOS:  Accediendo...</title>
+    <link id="aTitulo" href='' rel='shortcut icon' type='image/png' />
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen" />
+        
+    <link href="css/xMain.css" rel="stylesheet" type="text/css" />
+    <link href="css/redmond/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
+    <link href="Styles/redmond/jquery-ui-1.10.4.custom.css" rel="stylesheet" type="text/css"  />
+    <link href="Otra_Fuentes_ui/jquery-ui.theme.css" rel="stylesheet" type="text/css" />  
+    <link href="Otra_Fuentes_ui/jquery-ui.css" rel="stylesheet" type="text/css" />  
+    <link href="Otras_Fuentes_Ultimos/jqwidgets/styles/jqx.base.css" rel="stylesheet" type="text/css" />
+    <link href="Otras_Fuentes_Ultimos/jqwidgets/styles/jqx.arctic.css" rel="stylesheet" type="text/css" />
+    <link href="css/alertify.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/sweetalert.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/themes/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+                        
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="Otras_Fuentes_Ultimos/scripts/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="Otras_Fuentes_Ultimos/scripts/jquery-1.11.2.js" type="text/javascript"></script>
+    <script src="Scripts/json2.js" type="text/javascript"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/jquery-ui-1.10.4.min.js" type="text/javascript"></script>
+    
+    <!-- Libreria Ko -->
+    <script src="Scripts/scripts/knockout-3.0.0.js"></script>
+    <script src="Scripts/scripts/knockout-mapping-2.0.0.js"></script>
+
+    <script src="Scripts/jquery-1.6.2.min.js" type="text/javascript"></script>    
+    <script src='Scripts/jqGrid/jquery-ui-1.8.15.custom.min.js' type='text/javascript'></script> 
+    <script src="Scripts/moment.js" type="text/javascript"></script>
+    <script src="Scripts/alertify.min.js" type="text/javascript"></script>
+    <script src="Scripts/sweetalert.min.js" type="text/javascript"></script>
+    
+    <script type="text/javascript" src="Scripts/xlsx.full.min.js"></script>
+
+    <%--Referencia de los Objetos--%>
+    <script src="Otras_Fuentes_Ultimos/jqwidgets/jqx-all.js" type="text/javascript"></script>
+    <script src="Otras_Fuentes_Ultimos/jqwidgets/jqxcore.js" type="text/javascript"></script>
+    <script src="Otras_Fuentes_Ultimos/jqwidgets/jqxdata.js" type="text/javascript"></script>
+    <script src="Otras_Fuentes_Ultimos/jqwidgets/jqxdata.export.js" type="text/javascript"></script>
+    <script src="Otras_Fuentes_Ultimos/jqwidgets/jqxangular.js" type="text/javascript"></script>
+    <script src="Otras_Fuentes_Ultimos/jqwidgets/jqxknockout.js" type="text/javascript"></script>
+    <script src="Otras_Fuentes_Ultimos/jqwidgets/jqxlayout.js" type="text/javascript"></script>
+    <script src="Otras_Fuentes_Ultimos/jqwidgets/jqxdatatable.js" type="text/javascript"></script>
+    <script src="Otras_Fuentes_Ultimos/jqwidgets/jqxresponse.js" type="text/javascript"></script>
+    <script src="Otras_Fuentes_Ultimos/jqwidgets/jqxdatetimeinput.js" type="text/javascript"></script>
+    <script src="Otras_Fuentes_Ultimos/jqwidgets/jqxmaskedinput.js" type="text/javascript"></script>
+    <script src="Otras_Fuentes_Ultimos/jqwidgets/jqxresponsivepanel.js" type="text/javascript"></script>
+    <script src="Otras_Fuentes_Ultimos/jqwidgets/jqxtextarea.js" type="text/javascript"></script>
+    <script src="Otras_Fuentes_Ultimos/jqwidgets/jqxscrollbar.js" type="text/javascript"></script>
+    <script src="Otras_Fuentes_Ultimos/jqwidgets/jqxscrollview.js" type="text/javascript"></script>
+    <script src="Otras_Fuentes_Ultimos/jqwidgets/jqxtouch.js" type="text/javascript"></script>
+    <script src="Otras_Fuentes_Ultimos/jqwidgets/jqxwindow.js" type="text/javascript"></script>
+    <script src="Otras_Fuentes_Ultimos/jqwidgets/jqxgrid.js" type="text/javascript"></script>
+    <script src="Otras_Fuentes_Ultimos/jqwidgets/jqxgrid.aggregates.js" type="text/javascript"></script>
+    <script src="Otras_Fuentes_Ultimos/jqwidgets/jqxgrid.columnsreorder.js" type="text/javascript"></script>
+    <script src="Otras_Fuentes_Ultimos/jqwidgets/jqxgrid.columnsresize.js" type="text/javascript"></script>
+    <script src="Otras_Fuentes_Ultimos/jqwidgets/jqxgrid.export.js" type="text/javascript"></script>
+    <script src="Otras_Fuentes_Ultimos/jqwidgets/jqxgrid.edit.js" type="text/javascript"></script>
+    <script src="Otras_Fuentes_Ultimos/jqwidgets/jqxgrid.filter.js" type="text/javascript"></script>
+    <script src="Otras_Fuentes_Ultimos/jqwidgets/jqxgrid.grouping.js" type="text/javascript"></script>
+    <script src="Otras_Fuentes_Ultimos/jqwidgets/jqxgrid.pager.js" type="text/javascript"></script>
+    <script src="Otras_Fuentes_Ultimos/jqwidgets/jqxgrid.selection.js" type="text/javascript"></script>
+    <script src="Otras_Fuentes_Ultimos/jqwidgets/jqxgrid.sort.js" type="text/javascript"></script>
+    <script src="Otras_Fuentes_Ultimos/jqwidgets/jqxgrid.storage.js" type="text/javascript"></script>   
+    <script src="Otras_Fuentes_Ultimos/jqwidgets/globalization/globalize.js" type="text/javascript"></script>
+    <script src="Otra_Fuentes/jqwidgets/globalization/globalize.culture.es-ES.js" type="text/javascript"></script>
+    <script src="Otra_Fuentes/jqwidgets/gettheme.js" type="text/javascript"></script>
+
+    
+    <script src="Scripts/JContador_Sesion.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.idletimer.js" type="text/javascript"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="Scripts/html5shiv.js"></script>
+        <script src="Scripts/respond.min.js"></script>
+        <script src="Scripts/html5.js" ></script>
+    <![endif]-->
+    
+    
+    <script type="text/javascript">
+        // Variables Globales
+        var fullDate = "", date_str = "", hours_str = "", mREF = "", mHOST = "", mEMPRESA = "", mDIRECCION = "", xContenido = '', xOpciones = { }, yTitulo = 'Auditor del Sistema...',
+            xTitulo = '<div class="ui-widget"><div class="ui-state-highlight ui-corner-all" style="padding:0 .7em;"><p style="color: #cd0a0a;"><span class="ui-icon ui-icon-info" style="float:left;margin-right: .3em;" ></span><strong>Auditor del Sistema...</strong></p></div></div>',
+            mEMPRESA = "", mDIRECCION = "", mDEPARTAMENTO = "", aPermisos = [], yUser = "", yLog_User = "", yTipo_User = "", lastWidth = "", lastHeight = "", eWidth = "", eHeight = "", datainfo = "", aCod_Opt = '', 
+            yID_USER = 0, yID_ROL_USER = 0, ySESION_USER = 0, paginginfo = "", xTotal_Registros = 0, selectedrowindex = 0, selectedrowindexes = [], datarow = "", xID_REG = 0, xFILA_SELECCIONADA = 0, xPAGE_NUM = 0;
+
+        $(document).ready(function () {
+            try {
+                /* Control de las Opciones del Menu... */
+                if ($("#ID_USER").val() > 1){
+                    Ocultar_Opciones(); // Ocultar Opciones del Menu
+                    Cargar_Datos_MENU_PRINCIPAL($("#ID_USER").val(), $("#ID_ROL_USER").val());
+                }
+                                
+                PutSessionValue("Data_Prueba", 0); 
+                            
+                // Evitar ir atras...
+                if (history.forward(1)) {
+                    location.replace(history.forward(1));
+                }
+
+                $("#aTitulo").attr('href', 'images/catalogicon.png');
+
+                //override defaults
+                alertify.defaults.theme.ok = "btn btn-primary";
+                alertify.defaults.theme.cancel = "btn btn-danger";
+                alertify.defaults.theme.input = "form-control";
+
+                // Para actualizar el tiempo de la sesion...
+                setInterval(EchoSesion(), 60000); // Cada minuto, refrescar el timeout
+                setInterval(MantenSesion(), (<%=(int)(0.9 * (Session.Timeout * 60000))%>));
+                
+                // Para los Reportes...
+                mREF = $("#yREF_RPT").val();
+                mHOST = $("#HOST_APP").val();
+
+                // Para los Titulos de los Reportes...
+                mEMPRESA = $("#GRAL_EMPRESA_USER").val(); mDIRECCION = $("#ESP_EMPRESA_USER").val(); mDEPARTAMENTO = $("#DPTO_EMPRESA_USER").val(); 
+                                
+                var xError = $('#xLeyenda').val();
+                if (xError.length > 0) {
+                    swal(yTitulo, xError, "error", { buttons: { agregar: { text: "Aceptar" } }, closeOnClickOutside: false, allowOutsideClick: false });
+                }
+
+                /* Configuracion Regional en Idioma Español */
+                $.datepicker.setDefaults($.datepicker.regional['es']);
+                fullDate = new Date(); date_str = $.date(fullDate); hours_str = $.hours(fullDate);
+                
+                /* Efectos en las Opciones de Menu Principal, Los menus tipo Pop Up */
+                $("div.cuerpo_navegador").hide(); 
+
+                /* Al hacer click en el titulo del Menu Popup */
+                $("div.tit_navegador").click(function (e) {
+                    e.preventDefault(); aCod_Opt = $(this).attr("id");
+                    
+                    if (aCod_Opt != 'Opt_00') {
+                        if ($("#ID_USER").val() > 1){
+                            Permisos_Usuario($("#ID_USER").val(), $("#ID_ROL_USER").val(), aCod_Opt);
+                            if (aPermisos.length > 0) {
+                                if (aPermisos[0].EJEC == 0) {
+                                    xContenido = 'No Tiene Acceso a Esta Opcion...'; 
+                                    swal(yTitulo, xContenido, "error", { buttons: { agregar: { text: "Aceptar" } }, closeOnClickOutside: false, allowOutsideClick: false });
+                                } else {
+                                    $("ul.ul_navegador li:visible").removeClass("elemento_lista");
+                                    $("div.cuerpo_navegador:visible").slideUp().prev().removeClass("titulo_seleccionado");
+                                    $(this).addClass("titulo_seleccionado").next().slideDown();
+                                }
+                            }
+                            else { aPermisos = []; }
+                        } else {
+                            $("ul.ul_navegador li:visible").removeClass("elemento_lista");
+                            $("div.cuerpo_navegador:visible").slideUp().prev().removeClass("titulo_seleccionado");
+                            $(this).addClass("titulo_seleccionado").next().slideDown();
+                        }
+                    }
+                });
+
+                /* Al hacer click en un elemento de la Lista */
+                $("ul.ul_navegador li").click(function (e) {
+                    e.preventDefault(); aCod_Opt = $(this).attr("id");
+                    
+                    if ($("#ID_USER").val() > 1) {
+                        Permisos_Usuario($("#ID_USER").val(), $("#ID_ROL_USER").val(), aCod_Opt);
+                        if (aPermisos.length > 0) {
+                            if (aPermisos[0].EJEC == 0) {
+                                xContenido = 'No Tiene Acceso a Esta Opcion...'; 
+                                swal(yTitulo, xContenido, "error", { buttons: { agregar: { text: "Aceptar" } }, closeOnClickOutside: false, allowOutsideClick: false });
+                            } else {
+                                var aReferencia = $(this).find("a").attr("rel");  // Obtener el hiperenlace dentro de la Lista
+                                $("ul.ul_navegador li:visible").removeClass("elemento_lista");  $(this).addClass("elemento_lista");
+                                PutUserXmlInfo("LastTabClicked", aReferencia + 'º' + $("#LOG_USER").val() + 'º' + $("#ID_USER").val()); 
+                                jQuery(location).attr('href', aReferencia); 
+                            }
+                        }
+                        else { aPermisos = []; }
+                    } else {
+                        var aReferencia = $(this).find("a").attr("rel");  // Obtener el hiperenlace dentro de la Lista
+                        $("ul.ul_navegador li:visible").removeClass("elemento_lista");  $(this).addClass("elemento_lista");
+                        PutUserXmlInfo("LastTabClicked", aReferencia + 'º' + $("#LOG_USER").val() + 'º' + $("#ID_USER").val()); 
+                        jQuery(location).attr('href', aReferencia); 
+                    }
+                    
+                });
+
+                /* Al Click en el enlace cerrar sesion */
+                $("#cerrar_sesion").click(function () {
+                    var mSesion = "";
+                    mSesion = $("#SESION_USER").val();
+                    if (mSesion > 0) {
+                        Cerrar_Sesion(mSesion);
+                    } else {
+                        window.open("LogOut", "_self");
+                    }
+                });
+                        
+                /* Al Click en el enlace cerrar sesion */
+                $("#Opt_00").click(function () {
+                    window.open("Fondo", "_self");
+                });
+
+            } catch (ex) {
+                swal(yTitulo, ex.message, "error", { buttons: { agregar: { text: "Aceptar" } }, closeOnClickOutside: false, allowOutsideClick: false });
+            }
+
+        });
+
+        // Funciones Generales
+        function EchoSesion() {
+            // Buscando el Dato
+            var _tiempo = new Date();
+
+            $.ajax({
+                async: false,
+                type: "POST",
+                url: "Frm_Metodos_WEB_Services.aspx/Echo",
+                data: JSON.stringify({ tiempo: _tiempo }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    if (data.d.exito == false){
+                        swal(yTitulo, data.d.Mensaje, "error", { buttons: { agregar: { text: "Aceptar" } }, closeOnClickOutside: false, allowOutsideClick: false });
+                        return;
+                    }
+
+                    var xVal = JSON.stringify(data.d.Mensaje).substring(1, 2);
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    if (jqXHR.status === 0) {
+                        xContenido = 'No hay Conexión en la RED....';
+                    } else if (jqXHR.status == 404) {
+                        xContenido = 'Página No Encontrada....';
+                    } else if (jqXHR.status == 500) {
+                        xContenido = 'Error Interno en el Servidor....';
+                    } else if (textStatus === 'parsererror') {
+                        xContenido = 'Error de Conversión al Formato JSON....';
+                    } else if (textStatus === 'timeout') {
+                        xContenido = 'Tiempo de Inactividad Agotado....';
+                    } else if (textStatus === 'abort') {
+                        xContenido = 'Solicitud del Servicio Abortado....';
+                    } else {
+                        xContenido = jqXHR.responseText;
+                    }
+                    swal(yTitulo, xContenido, "error", { buttons: { agregar: { text: "Aceptar" } }, closeOnClickOutside: false, allowOutsideClick: false });
+                    return false;
+                }
+            });
+        };
+
+        $.date = function (dateObject) {
+            var d = new Date(dateObject);
+            var day = d.getDate();
+            var month = d.getMonth() + 1;
+            var year = d.getFullYear();
+            if (day < 10) {
+                day = "0" + day;
+            }
+            if (month < 10) {
+                month = "0" + month;
+            }
+            var date = day + "/" + month + "/" + year;
+
+            return date;
+        };
+
+        $.hours = function (dateObject) {
+            var d = new Date(dateObject);
+            
+            var hour = d.getHours();
+            var minutes = d.getMinutes();
+            var seconds = d.getSeconds();
+
+            if (hour > 12){
+                hour = (hour - 12);
+            }
+
+            if (hour < 10) {
+                hour = "0" + hour;
+            }
+            if (minutes < 10) {
+                minutes = "0" + minutes;
+            }
+            if (seconds < 10) {
+                seconds = "0" + seconds;
+            }
+            var hours = hour + ":" + minutes + ":" + seconds;
+
+            return hours;
+        };
+                
+        function GetUserXmlInfo(Key_) {
+            var Respuesta = "";
+            var User_ = $("#LOG_USER").val();
+            $.ajax({
+                async: false,
+                type: "POST",
+                url: "Frm_Metodos_WEB_Services.aspx/GetUserXmlInfo",
+                data: JSON.stringify({ User: User_, Key: Key_ }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (msg) {
+                    if (msg.d != "-100") {
+                        Respuesta = msg.d;
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    if (jqXHR.status === 0) {
+                        xContenido = 'No hay Conexión en la RED....';
+                    } else if (jqXHR.status == 404) {
+                        xContenido = 'Página No Encontrada....';
+                    } else if (jqXHR.status == 500) {
+                        xContenido = 'Error Interno en el Servidor....';
+                    } else if (textStatus === 'parsererror') {
+                        xContenido = 'Error de Conversión al Formato JSON....';
+                    } else if (textStatus === 'timeout') {
+                        xContenido = 'Tiempo de Inactividad Agotado....';
+                    } else if (textStatus === 'abort') {
+                        xContenido = 'Solicitud del Servicio Abortado....';
+                    } else {
+                        xContenido = jqXHR.responseText;
+                    }
+                    swal(yTitulo, xContenido, "error", { buttons: { agregar: { text: "Aceptar" } }, closeOnClickOutside: false, allowOutsideClick: false });
+                    return false;
+                }
+            });
+            return Respuesta;
+        };
+
+        function PutUserXmlInfo(Key_, Value_) {
+            var Respuesta = "";
+            var User_ = $("#LOG_USER").val();
+
+            $.ajax({
+                async: false,
+                type: "POST",
+                url: "Frm_Metodos_WEB_Services.aspx/PutUserXmlInfo",
+                data: JSON.stringify({ User: User_, Key: Key_, Value: Value_ }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (msg) {
+                    if (msg.d != "-100") {
+                        Respuesta = msg.d;
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    if (jqXHR.status === 0) {
+                        xContenido = 'No hay Conexión en la RED....';
+                    } else if (jqXHR.status == 404) {
+                        xContenido = 'Página No Encontrada....';
+                    } else if (jqXHR.status == 500) {
+                        xContenido = 'Error Interno en el Servidor....';
+                    } else if (textStatus === 'parsererror') {
+                        xContenido = 'Error de Conversión al Formato JSON....';
+                    } else if (textStatus === 'timeout') {
+                        xContenido = 'Tiempo de Inactividad Agotado....';
+                    } else if (textStatus === 'abort') {
+                        xContenido = 'Solicitud del Servicio Abortado....';
+                    } else {
+                        xContenido = jqXHR.responseText;
+                    }
+                    swal(yTitulo, xContenido, "error", { buttons: { agregar: { text: "Aceptar" } }, closeOnClickOutside: false, allowOutsideClick: false });
+                    return false;
+                }
+            });
+        };
+        
+        function PutSessionValue(Key_, Value_) {
+            var Respuesta = "";
+            
+            $.ajax({
+                async: false,
+                type: "POST",
+                url: "Frm_Metodos_WEB_Services.aspx/PutSessionValue",
+                data: JSON.stringify({ Key: Key_, Value: Value_ }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (msg) {
+                    Respuesta = msg.d;
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    if (jqXHR.status === 0) {
+                        xContenido = 'No hay Conexión en la RED....';
+                    } else if (jqXHR.status == 404) {
+                        xContenido = 'Página No Encontrada....';
+                    } else if (jqXHR.status == 500) {
+                        xContenido = 'Error Interno en el Servidor....';
+                    } else if (textStatus === 'parsererror') {
+                        xContenido = 'Error de Conversión al Formato JSON....';
+                    } else if (textStatus === 'timeout') {
+                        xContenido = 'Tiempo de Inactividad Agotado....';
+                    } else if (textStatus === 'abort') {
+                        xContenido = 'Solicitud del Servicio Abortado....';
+                    } else {
+                        xContenido = jqXHR.responseText;
+                    }
+                    swal(yTitulo, xContenido, "error", { buttons: { agregar: { text: "Aceptar" } }, closeOnClickOutside: false, allowOutsideClick: false });
+                    return false;
+                }
+            });
+        };
+
+        function GetSessionValue(Key_) {
+            var Respuesta = "";
+            
+            $.ajax({
+                async: false,
+                type: "POST",
+                url: "Frm_Metodos_WEB_Services.aspx/GetSessionValue",
+                data: JSON.stringify({ Key: Key_ }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (msg) {
+                    Respuesta = msg.d;
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    if (jqXHR.status === 0) {
+                        xContenido = 'No hay Conexión en la RED....';
+                    } else if (jqXHR.status == 404) {
+                        xContenido = 'Página No Encontrada....';
+                    } else if (jqXHR.status == 500) {
+                        xContenido = 'Error Interno en el Servidor....';
+                    } else if (textStatus === 'parsererror') {
+                        xContenido = 'Error de Conversión al Formato JSON....';
+                    } else if (textStatus === 'timeout') {
+                        xContenido = 'Tiempo de Inactividad Agotado....';
+                    } else if (textStatus === 'abort') {
+                        xContenido = 'Solicitud del Servicio Abortado....';
+                    } else {
+                        xContenido = jqXHR.responseText;
+                    }
+                    swal(yTitulo, xContenido, "error", { buttons: { agregar: { text: "Aceptar" } }, closeOnClickOutside: false, allowOutsideClick: false });
+                    return false;
+                }
+            });
+        };
+
+        function MantenSesion()
+        {                
+
+            var CONTROLADOR = 'MantenSesionHandler.ashx';
+            var head = document.getElementsByTagName('head').item(0);            
+
+            var script = document.createElement('script');            
+            script.src = CONTROLADOR ;
+            script.setAttribute('type', 'text/javascript');
+            script.defer = true;
+
+            head.appendChild(script);
+
+        };
+
+        function Cerrar_Sesion(_xSesion) {
+            $.ajax({
+                async: false,
+                type: "POST",
+                url: "Frm_Metodos_WEB_Services.aspx/Cerrar_Sesion",
+                data: JSON.stringify({ xSesion: _xSesion }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+
+                success: function (data) {
+                    if (data.d.exito == false){
+                        swal(yTitulo, data.d.Mensaje, "error", { buttons: { agregar: { text: "Aceptar" } }, closeOnClickOutside: false, allowOutsideClick: false });
+                        return;
+                    }
+
+                    window.open("Frm_LogOut.aspx", "_self");
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    if (jqXHR.status === 0) {
+                        xContenido = 'No hay Conexión en la RED....';
+                    } else if (jqXHR.status == 404) {
+                        xContenido = 'Página No Encontrada....';
+                    } else if (jqXHR.status == 500) {
+                        xContenido = 'Error Interno en el Servidor....';
+                    } else if (textStatus === 'parsererror') {
+                        xContenido = 'Error de Conversión al Formato JSON....';
+                    } else if (textStatus === 'timeout') {
+                        xContenido = 'Tiempo de Inactividad Agotado....';
+                    } else if (textStatus === 'abort') {
+                        xContenido = 'Solicitud del Servicio Abortado....';
+                    } else {
+                        xContenido = jqXHR.responseText;
+                    }
+                    swal(yTitulo, xContenido, "error", { buttons: { agregar: { text: "Aceptar" } }, closeOnClickOutside: false, allowOutsideClick: false });
+                    return false;
+                }
+            });
+        };
+        
+        function Permisos_Usuario(xUser, xRol, xOpcion) {
+            $.ajax({
+                async: false,
+                type: "POST",
+                url: "Frm_Metodos_WEB_Services.aspx/Acceso_Opciones",
+                data: JSON.stringify({ xUser: xUser, xRol: xRol, xOpcion: xOpcion }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    if (data.d.exito == false){
+                        swal(yTitulo, data.d.Mensaje, "error", { buttons: { agregar: { text: "Aceptar" } }, closeOnClickOutside: false, allowOutsideClick: false });
+                        return;
+                    }
+
+                    var oDATOS = $.parseJSON(data.d.Mensaje); aPermisos.splice(0, (aPermisos.length));
+                    $.each(oDATOS, function (pos, elemento) {
+                        aPermisos.push({
+                            'EJEC': elemento.EJEC, 'VIS': elemento.VIS, 'IMP': elemento.IMP, 'DEL': elemento.DEL,
+                            'INS': elemento.INS, 'ACT': elemento.ACT
+                        });
+                    });
+
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    if (jqXHR.status === 0) {
+                        xContenido = 'No hay Conexión en la RED....';
+                    } else if (jqXHR.status == 404) {
+                        xContenido = 'Página No Encontrada....';
+                    } else if (jqXHR.status == 500) {
+                        xContenido = 'Error Interno en el Servidor....';
+                    } else if (textStatus === 'parsererror') {
+                        xContenido = 'Error de Conversión al Formato JSON....';
+                    } else if (textStatus === 'timeout') {
+                        xContenido = 'Tiempo de Inactividad Agotado....';
+                    } else if (textStatus === 'abort') {
+                        xContenido = 'Solicitud del Servicio Abortado....';
+                    } else {
+                        xContenido = jqXHR.responseText;
+                    }
+                    swal(yTitulo, xContenido, "error", { buttons: { agregar: { text: "Aceptar" } }, closeOnClickOutside: false, allowOutsideClick: false });
+                    return false;
+                }
+            });
+        };
+
+        function Ocultar_Opciones() {
+            // Invisible la Opciones del Menu
+            $(".tit_navegador").hide(); $(".cuerpo_navegador").hide();
+            $("ul.ul_navegador li").each(function () {
+                $(this).hide()
+            });
+        }
+
+        function Cargar_Datos_MENU_PRINCIPAL(xUser, xRol) {
+            $.ajax({
+                async: false,
+                type: "POST",
+                url: "Frm_Metodos_WEB_Services.aspx/Listado_Acceso_Opciones",
+                data: JSON.stringify({ xUser: xUser, xRol: xRol }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    if (data.d.exito == false){
+                        swal(yTitulo, data.d.Mensaje, "error", { buttons: { agregar: { text: "Aceptar" } }, closeOnClickOutside: false, allowOutsideClick: false });
+                        return;
+                    }
+
+                    var oDATOS = $.parseJSON(data.d.Mensaje);
+
+                    $("#Opt_00").show();
+                    $.each(oDATOS, function (pos, elemento) {
+                        $("#" + elemento.ID).show(); 
+                    });
+
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    if (jqXHR.status === 0) {
+                        xContenido = 'No hay Conexión en la RED....';
+                    } else if (jqXHR.status == 404) {
+                        xContenido = 'Página No Encontrada....';
+                    } else if (jqXHR.status == 500) {
+                        xContenido = 'Error Interno en el Servidor....';
+                    } else if (textStatus === 'parsererror') {
+                        xContenido = 'Error de Conversión al Formato JSON....';
+                    } else if (textStatus === 'timeout') {
+                        xContenido = 'Tiempo de Inactividad Agotado....';
+                    } else if (textStatus === 'abort') {
+                        xContenido = 'Solicitud del Servicio Abortado....';
+                    } else {
+                        xContenido = jqXHR.responseText;
+                    }
+                    swal(yTitulo, xContenido, "error", { buttons: { agregar: { text: "Aceptar" } }, closeOnClickOutside: false, allowOutsideClick: false });
+                    return false;
+                }
+            });
+        };
+
+    </script>
+    
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+     
+</head>
+<body onload="Javascript:history.go(1);" onunload="Javascript:history.go(1);">
+    
+
+    <header id="cabecera_principal">
+        <div id="Foto_05">
+            <%--<img src="images/Fotos/Estudiantes/Foto_Inicial1.png" class="img-responsive" border="0" alt="logo" />--%>
+        </div>
+        <div id="usuario_sesion" style="width:auto;">
+            <%--Datos de Variables de Sesion Ocultos--%>
+            <input type="hidden" id="ID_USER" name="ID_USER" value="" runat="server"/>
+            <input type="hidden" id="LOG_USER" name="LOG_USER" value="" runat="server"/>
+            <input type="hidden" id="ROL_USER" name="ROL_USER" value="" runat="server"/>
+            <input type="hidden" id="ID_ROL_USER" name="ID_ROL_USER" value="" runat="server"/>
+            <input type="hidden" id="SESION_USER" name="SESION_USER" value="" runat="server"/>
+            <input type="hidden" id="GRAL_EMPRESA_USER" name="GRAL_EMPRESA_USER" value="" runat="server"/>
+            <input type="hidden" id="ESP_EMPRESA_USER" name="ESP_EMPRESA_USER" value="" runat="server"/>
+            <input type="hidden" id="DPTO_EMPRESA_USER" name="DPTO_EMPRESA_USER" value="" runat="server"/>
+            <input type="hidden" id="yREF_RPT" name="yREF_RPT" value="" runat="server"/>
+            <input type="hidden" id="HOST_APP" name="HOST_APP" value="" runat="server"/>
+            <input type="hidden" id="xLeyenda" value="" runat="server" />
+            
+            <%--Datos de Variables de Sesion Visibles--%>
+            <img src="images/Otros/user.png" alt="Usuario Autenticado" width="16px" height="16px" style="margin-top:5px" />
+            <a id="NomUser" href="#" style="text-decoration: none; font-size:0.8em; font-weight:bold; color:Blue;" runat="server"></a>
+            <img src="images/Otros/16-security-lock.png" alt="ROL del Usuario Autenticado" width="16px" height="16px" style="margin-top:5px;" />
+            <a id="RolUser" href="#" style="text-decoration: none; font-size:0.8em; font-weight:bold; color:Blue;" runat="server"></a>
+            <img src="images/Otros/LogOut.png" alt="Salir del Sistema" width="16px" height="16px" style="margin-left:5px" />
+            <a id="cerrar_sesion" href="#" style="text-decoration: none; font-size:0.8em; font-weight:bold; color:Blue;">SALIR</a>
+        </div>
+        
+        <div style="clear:both;"></div>
+
+        <%--Para Efecto de Guardar Informacion --%>
+        <div id="Mis_Permisos" style="display:none;"></div>
+
+    </header>
+    
+    <section id="contenedor">
+        <section id="menu_principal">  
+            <%-- Menu de Opciones REGISTRAR --%>
+            <div id="Opt_00" class="tit_navegador">Inicio</div>
+            <div id="Opt_01" class="tit_navegador">Catálogos</div>
+            <div class="cuerpo_navegador">
+                <ul class="ul_navegador">
+                    <li id="Opt_01_01"><a href="#Reg-Cat_Colores" rel="Reg-Cat_Colores">Colores</a></li> 
+                    <li id="Opt_01_02"><a href="#Reg-Cat_Marcas" rel="Reg-Cat_Marcas">Marcas</a></li> 
+                    <li id="Opt_01_03"><a href="#Reg-Cat_Modelos" rel="Reg-Cat_Modelos">Modelos</a></li> 
+                    <li id="Opt_01_04"><a href="#Reg-Cat_Clases" rel="Reg-Cat_Clases">Clases</a></li> 
+                    <li id="Opt_01_01_01" class="raya"></li>
+                    <li id="Opt_01_05"><a href="#Reg-Cat_Procedencias" rel="Reg-Cat_Procedencias">Procedencias</a></li> 
+                    <li id="Opt_01_06"><a href="#Reg-Cat_Tipos_Altas" rel="Reg-Cat_Tipos_Altas">Tipo Altas</a></li>
+                    <li id="Opt_01_07"><a href="#Reg-Cat_Tipos_Movimientos" rel="Reg-Cat_Tipos_Movimientos">Tipo Movimiento</a></li> 
+                    <li id="Opt_01_01_02" class="raya"></li>
+                    <li id="Opt_01_08"><a href="#Reg-Cat_Tipos_Proveedores" rel="Reg-Cat_Tipos_Proveedores">Tipo Proveedor</a></li> 
+                    <li id="Opt_01_09"><a href="#Reg-Cat_Tipos_Contactos" rel="Reg-Cat_Tipos_Contactos">Tipo Contacto</a></li> 
+                    <li id="Opt_01_10"><a href="#Reg-Cat_Tipos_Sexos" rel="Reg-Cat_Tipos_Sexos">Tipo Sexo</a></li> 
+                    <li id="Opt_01_01_03" class="raya"></li>
+                    <li id="Opt_01_11"><a href="#Reg-Cat_Centro_Costos" rel="Reg-Cat_Centro_Costos">Centro de Costo</a></li> 
+                    <li id="Opt_01_12"><a href="#Reg-Cat_Cargos_Ocupacionales" rel="Reg-Cat_Cargos_Ocupacionales">Cargos</a></li> 
+                </ul>
+            </div>  
+            <div id="Opt_02" class="tit_navegador">Registrar</div>
+            <div class="cuerpo_navegador">
+                <ul class="ul_navegador">
+                    <li id="Opt_02_02"><a href="#Reg-Mov_Empleados" rel="Reg-Mov_Empleados">Empleados</a></li> 
+                    <li id="Opt_02_03"><a href="#Reg-Mov_Proveedores" rel="Reg-Mov_Proveedores">Proveedores</a></li> 
+                    <li id="Opt_02_01"><a href="#Reg-Mov_Articulos" rel="Reg-Mov_Articulos">Artículos</a></li> 
+                    <li id="Opt_02_01_01" class="raya"></li>
+                    <%--<li id="Opt_02_05"><a href="#Reg-Mov_Entradas_Activos_Fijos" rel="Reg-Mov_Entradas_Activos_Fijos">Entradas</a></li>  --%>
+                    <li id="Opt_02_04"><a href="#Reg-Mov_Asignacion_Activos_Fijos" rel="Reg-Mov_Asignacion_Activos_Fijos">Asignaciones</a></li>  
+                </ul>
+            </div>                                        
+            <%--<div id="Opt_03" class="tit_navegador">Reportes</div>
+            <div class="cuerpo_navegador">
+                <ul class="ul_navegador">
+                    <li id="Opt_03_01"><a href="#Reg-Reportes" rel="Reg-Reportes">Reportes</a></li> 
+                    <li id="Opt_03_01_01" class="raya"></li>
+                    <li id="Opt_03_02"><a href="#Reg-Actualizar_Clave" rel="Reg-Actualizar_Clave">Cambiar Clave</a></li>  
+                </ul>
+            </div>       --%>   
+            <div id="Opt_04" class="tit_navegador">Administración</div>
+            <div class="cuerpo_navegador">
+                <ul class="ul_navegador">
+                    <li id="Opt_04_01"><a href="#Reg-Sys_Roles" rel="Reg-Sys_Roles">Roles</a></li> 
+                    <li id="Opt_04_02"><a href="#Reg-Sys_Usuarios" rel="Reg-Sys_Usuarios">Usuarios</a></li>  
+                    <li id="Opt_04_01_01" class="raya"></li>
+                    <li id="Opt_04_03"><a href="#Reg-Sys_Opciones_Modulo" rel="Reg-Sys_Opciones_Modulo">Opciones</a></li> 
+                    <li id="Opt_04_01_02" class="raya"></li>
+                    <li id="Opt_04_04"><a href="#Reg-Sys_Accesos" rel="Reg-Sys_Accesos">Accesos</a></li>  
+                    <li id="Opt_04_05"><a href="#Reg-Sys_Sesiones_Bitacoras" rel="Reg-Sys_Sesiones_Bitacoras">Bitácora</a></li>  
+                </ul>
+            </div>                                                                                              
+        </section>
+        <section id="pagina_contenido">
+            <asp:ContentPlaceHolder id="Paginas_Contenidos" runat="server">
+            </asp:ContentPlaceHolder>
+        </section>
+    </section>
+
+</body>
+</html>
